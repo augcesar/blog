@@ -1,0 +1,11 @@
+<%= simple_form_for @artigo do |f| %>
+  
+  <%= f.input :titulo %>
+  <%= f.input :descricao, as: :wysihtml5 %>
+  <%= f.input :publicar %>
+  
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            artigos_path, :class => 'btn btn-default' %>
+ 
+<% end %>

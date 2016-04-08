@@ -1,0 +1,11 @@
+
+<%= simple_form_for @cadastro, url: { action: {new: 'create', create: 'create', edit: 'update', update: 'update'}[params[:action].to_sym] } do |f| %>
+  
+  <%= f.input :nome %>
+  <%= f.input :email %>
+  
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            cadastros_path, :class => 'btn btn-default' %>
+ 
+<% end %>
